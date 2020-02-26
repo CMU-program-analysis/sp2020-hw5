@@ -51,7 +51,7 @@ public class IntraTest {
             w = y;
         else
             w = z;
-        int ignore = array[w]; // ERROR
+        int ignore = array[w]; // WARNING
     }
 
     public static void test5() {
