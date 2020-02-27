@@ -41,5 +41,6 @@ public class InterSignAnalysis {
         // A good strategy will likely involve passing the context and the input
         // sigma to the SignAnalysis and then looking at the results to extract
         // the new sigma.
+        return null;
     }
 }
