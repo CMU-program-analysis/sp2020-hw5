@@ -114,7 +114,7 @@ public class IntraSignAnalysis extends ForwardFlowAnalysis {
      * Initial flow information at the start of a method
      */
     @Override
-    protected Object newInitialFlow() {
+    protected Object entryInitialFlow() {
         // TODO: Implement me!
         return new Sigma();
     }
@@ -123,7 +123,7 @@ public class IntraSignAnalysis extends ForwardFlowAnalysis {
      * Initial flow information at each other program point
      */
     @Override
-    protected Object entryInitialFlow() {
+    protected Object newInitialFlow() {
         // TODO: Implement me!
         return new Sigma();
     }
