@@ -36,7 +36,7 @@ public class InterSignAnalysis {
         // TODO: Implement me!
     }
 
-    void analyze(Context ctx, Sigma sigma_i) {
+    Sigma analyze(Context ctx, Sigma sigma_i) {
         // TODO: Implement me!
         // A good strategy will likely involve passing the context and the input
         // sigma to the SignAnalysis and then looking at the results to extract
