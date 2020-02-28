@@ -47,12 +47,12 @@ public class InterTest {
         w = more_neg(y);
 
         // Analysis stack:
-        // (fn: more_neg, ctx: more_neg@52, input: N) =
-        // (fn: neg, ctx: more_neg@52, neg@10, input: N) = P
+        // (fn: more_neg, ctx: more_neg@52, input: N) = P
+        // (fn: neg, ctx: more_neg@52, neg@10, input: N) = T
         x = more_neg(z);
 
         ignore = array[w]; // ERROR (w -> N)
-        ignore = array[x]; // OK (x -> P)
+        ignore = array[x]; // WARNING (x -> T)
 
         // Analysis stack:
         // (fn: even_more_neg, ctx: even_more_neg@61, input: P) =

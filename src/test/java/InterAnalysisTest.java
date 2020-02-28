@@ -29,6 +29,7 @@ public class InterAnalysisTest extends AnalysisTest {
         addExpected(ErrorMessage.NEGATIVE_INDEX_ERROR, 31);
         addExpected(ErrorMessage.NEGATIVE_INDEX_ERROR, 41);
         addExpected(ErrorMessage.NEGATIVE_INDEX_ERROR, 54);
+        addExpected(ErrorMessage.POSSIBLE_NEGATIVE_INDEX_WARNING, 55);
         addExpected(ErrorMessage.NEGATIVE_INDEX_ERROR, 70);
         addExpected(ErrorMessage.POSSIBLE_NEGATIVE_INDEX_WARNING, 71);
         Assert.assertEquals(expected, Utils.getErrors());
