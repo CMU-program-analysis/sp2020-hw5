@@ -45,8 +45,14 @@ public class Utils {
         if (message == ErrorMessage.NEGATIVE_INDEX_ERROR) {
             ErrorReport warning = new ErrorReport(ErrorMessage.POSSIBLE_NEGATIVE_INDEX_WARNING, line, name);
             errors.remove(warning);
+            errors.add(new ErrorReport(message, line, name));
         }
-        errors.add(new ErrorReport(message, line, name));
+        if (message == ErrorMessage.POSSIBLE_NEGATIVE_INDEX_WARNING) {
+            ErrorReport error = new ErrorReport(ErrorMessage.NEGATIVE_INDEX_ERROR, line, name);
+            if (!errors.contains(error))
+                errors.add(new ErrorReport(message, line, name));
+        }
+
     }
 
     public static void resetErrors() {
